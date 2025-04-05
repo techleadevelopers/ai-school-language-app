@@ -1,74 +1,48 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
+// 📁 app/(tabs)/index.tsx
+import { StyleSheet, Image, Platform } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import Container from '@/components/Container';
+import Typography from '@/components/Typography';
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#B0E0E6', dark: '#1A1D2B' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/logo.png')}
+          style={styles.logo}
+          resizeMode="contain"
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+      }
+    >
+      <Container>
+        <Typography type="headline">Bem-vindo ao Bilingui-AI 👋</Typography>
+        <Typography>
+          Aprenda idiomas de forma prática com IA local, correções em tempo real e desafios gamificados.
+        </Typography>
+
+        <Typography type="headline">📘 Como começar:</Typography>
+        <Typography>
+          1️⃣ Vá para a aba <Typography style={{ fontWeight: 'bold' }}>Explorar</Typography> para praticar sua fala{'\n'}
+          2️⃣ Toque no microfone e diga uma frase{'\n'}
+          3️⃣ Veja o feedback da IA com sugestões de melhoria
+        </Typography>
+
+        <Typography type="headline">🚀 Dicas</Typography>
+        <Typography>
+          Toque nos ícones abaixo para acessar rankings, lições e histórico.
+        </Typography>
+      </Container>
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  logo: {
+    height: 200,
+    width: 200,
+    alignSelf: 'center',
+    marginTop: Platform.OS === 'ios' ? 60 : 40,
   },
 });

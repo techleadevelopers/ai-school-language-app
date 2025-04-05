@@ -1,39 +1,46 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
+// 📁 app/_layout.tsx - Layout Global
+import { useEffect, useState } from 'react';
+import { Slot, Redirect } from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import useColorScheme from '../hooks/useColorScheme';
+import { ThemeProvider } from '@react-navigation/native';
+import Colors from '../constants/Colors';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+  const colorScheme: 'light' | 'dark' = useColorScheme();
+  const themeColors = Colors[colorScheme];
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // 👈 Simule login
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+    // 👉 Trocar isso por lógica real depois (e.g. AsyncStorage, Firebase, etc)
+    const checkAuth = async () => {
+      // await AsyncStorage.getItem('userToken') etc...
+      setIsLoggedIn(false); // coloque true se quiser pular o login
+      setLoading(false);
+    };
+    checkAuth();
+  }, []);
 
-  if (!loaded) {
-    return null;
+  if (loading) return null; // Pode adicionar um splash ou loader
+
+  if (!isLoggedIn) {
+    return <Redirect href="/login" />;
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider
+        value={{
+          dark: colorScheme === 'dark',
+          colors: themeColors,
+        }}
+      >
+        <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
+        <Slot />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }

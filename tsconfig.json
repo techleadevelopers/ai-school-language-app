@@ -2,10 +2,12 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "moduleResolution": "node",           // ✅ Corrige erro TS7016
+    "esModuleInterop": true,               // ✅ Compatibilidade com CommonJS e ESModules
+    "skipLibCheck": true,                  // ✅ Ignora checagens em dependências (como native)
+    "baseUrl": ".",                        // ✅ Garante base de caminhos relativa à raiz
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]                       // ✅ Suporte a importações absolutas tipo '@/components/...'
     }
   },
   "include": [
