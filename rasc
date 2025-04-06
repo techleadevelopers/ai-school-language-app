@@ -1,0 +1,158 @@
+🚀 FLUXO LÓGICO DO BACKEND (macro)
+Etapa	Descrição	Endpoint principal
+1. Cadastro/Login	Criação/autenticação do usuário com JWT	POST /auth/register / POST /auth/login
+2. Perfil	Avatar, nome, idioma nativo, idioma de estudo	GET /users/me / PUT /users/update
+3. Trilha de Cursos	Cada curso com sequência de lições e níveis	GET /lessons/track/{lang}
+4. Lição Atual	Recuperar a lição atual do usuário	GET /lessons/next
+5. Questionário	Enviar resposta da pergunta atual	POST /lessons/answer
+6. Progresso	Avançar percentual do curso com base na lição	GET /progress/{user_id} / PUT /progress/update
+7. Chat com IA	Simulação de conversas com IA local	POST /chat
+8. Envio de Áudio	Gravação de fala com correção via Whisper	POST /audio/submit
+9. Feedback	Correção automática + sugestão de fala	GET /feedback/{audio_id}
+10. Ranking & Medalhas	Pontuação, streaks e conquistas	GET /leaderboard / GET /users/{id}/achievements
+🧠 ESTRATÉGIAS AVANÇADAS DE LÓGICA
+🔐 1. Autenticação e Usuário
+Registro simples com nome, email e senha
+
+Role: admin, student, native
+
+Idioma nativo e idioma que está aprendendo
+
+Avatar e configurações
+
+Campos no modelo User:
+
+py
+Copiar
+Editar
+id, name, email, password_hash, role, avatar_url, native_lang, target_lang, created_at
+📚 2. Cursos e Lições
+Cada curso (idioma) tem múltiplos níveis e lições
+
+Cada lição tem um type: reading, listening, speaking, question, chat
+
+Exemplo:
+
+Curso	Lição	Tipo	Conteúdo
+🇺🇸 Inglês	1	reading	texto
+🇺🇸 Inglês	2	listening	áudio
+🇺🇸 Inglês	3	speaking	envio de voz
+🇺🇸 Inglês	4	question	pergunta
+🇺🇸 Inglês	5	chat	simulação com IA
+📈 3. Progresso Inteligente
+Cada lição completa dá +20% (pode customizar)
+
+Guarda o progresso por tipo (reading, speaking, chat, etc.)
+
+Ao atingir 100%, desbloqueia o próximo nível
+
+Modelo Progress:
+
+py
+Copiar
+Editar
+id, user_id, course_id, current_lesson_id, percent, last_activity
+🗣️ 4. Envio de Áudio (Whisper)
+Aluno envia fala em uma lição do tipo speaking
+
+API processa com Whisper
+
+Avalia com base na frase esperada (semântica)
+
+Retorna:
+
+Correção automática
+
+Pontuação (0–100%)
+
+Feedback de pronúncia
+
+🧠 5. Chat com IA (Mistral)
+Envia mensagem com contexto da lição (ex: "compras no mercado")
+
+IA responde como nativo
+
+Avaliação semântica do que o usuário respondeu
+
+Guarda chat log
+
+🏆 6. Gamificação
+Cada lição dá moedas (bulbs)
+
+Medalhas por conquistas:
+
+7 dias de streak
+
+10 lições completas
+
+100% em uma lição de fala
+
+Ranking global e semanal
+
+📊 7. Perfil e Estatísticas
+Gráfico por categoria (igual profile.tsx)
+
+Porcentagem de acertos, desempenho em fala, leitura, chat
+
+Histórico das últimas lições
+
+✅ LISTA DE ENDPOINTS SUGERIDOS
+Rota	Método	Descrição
+/auth/register	POST	Cadastrar novo usuário
+/auth/login	POST	Login + JWT
+/users/me	GET	Dados do perfil
+/users/update	PUT	Atualiza avatar, nome, idioma
+/lessons/track/{lang}	GET	Lista trilha de curso
+/lessons/next	GET	Próxima lição
+/lessons/answer	POST	Resposta de question
+/progress/{user_id}	GET	Ver progresso
+/progress/update	PUT	Atualizar %
+/chat	POST	Enviar mensagem pro Mistral
+/audio/submit	POST	Enviar áudio
+/feedback/{audio_id}	GET	Retorna feedback do Whisper
+/leaderboard	GET	Ranking global
+/users/{id}/achievements	GET	Medalhas e streaks
+📁 BACKEND – SUGESTÃO DE PASTAS (refinada)
+arduino
+Copiar
+Editar
+bilingui-backend/
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── api/
+│   ├── models/
+│   ├── schemas/
+│   ├── services/
+│   └── utils/
+├── static/
+├── tests/
+├── Dockerfile
+├── requirements.txt
+└── alembic/
+🧠 O QUE PODEMOS INTEGRAR DE IA AINDA
+✨ Feedback emocional do chat ("Você parece feliz!", usando LLM)
+
+🗨️ Correção gramatical completa no chat.tsx via Mistral
+
+📣 Transcrição + pronúncia animada no question.tsx (Whisper + visualização)
+
+📈 Recomendações de lições baseadas no histórico
+
+🔁 Áudio repetido com voz IA (text-to-speech) via ElevenLabs
+
+Se quiser, posso agora:
+
+✅ Gerar cada rota da pasta api com base nos endpoints acima
+✅ Criar um exemplo real do Whisper recebendo áudio
+✅ Criar a lógica de pontuação e streak com Redis ou SQL
+✅ Conectar tudo com frontend (/chat, /profile, etc)
+
+Só dizer: qual parte quer seguir agora?
+
+
+
+
+
+
+

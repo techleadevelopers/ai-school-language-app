@@ -1,0 +1,38 @@
+# Core FastAPI stack
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+python-dotenv
+
+# Database + ORM
+sqlalchemy
+alembic
+databases
+
+# Auth
+passlib[bcrypt]
+python-jose[cryptography]
+
+# Audio processing (para Whisper)
+whisper
+ffmpeg-python
+
+# IA e requisições externas
+openai
+httpx
+
+# Background tasks e utilitários
+aiofiles
+email-validator
+python-slugify
+
+# Dev tools
+ipython
+pytest
+pytest-asyncio
+
+# Para SQLite local
+aiosqlite
+asyncpg
