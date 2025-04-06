@@ -1,144 +1,127 @@
-<h1 align="center">🤖 Bilingui-AI</h1>
-<p align="center">
-  <img src="./assets/images/logo.png" alt="Bilingui-AI Logo" width="160"/>
-</p>
-<p align="center">
-  Aprendizado de idiomas com IA local, gamificação e correção de fala em tempo real.
-</p>
+<h1 align="center">🤖 Bilingui-AI</h1> <p align="center"> <img src="./frontend/assets/images/logo.png" alt="Bilingui-AI Logo" width="160"/> </p> <p align="center"> Plataforma educacional de idiomas com IA local (Whisper + Mistral), gamificação, chat com IA e feedback de fala em tempo real. </p> <p align="center"> <img src="https://img.shields.io/badge/IA--Local-Whisper%20%2B%20Mistral-10b2f5?style=flat-square&logo=OpenAI&logoColor=white"/> <img src="https://img.shields.io/badge/Mobile-React%20Native-blue?style=flat-square&logo=react"/> <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=python"/> <img src="https://img.shields.io/badge/UX-Futuristic%20UI%20%2B%20Gamification-facc15?style=flat-square"/> <img src="https://img.shields.io/badge/Voice-Whisper%20ASR%20ready-20c997?style=flat-square"/> </p>
+📚 Índice
+📌 Visão Geral
 
-<p align="center">
-  <img src="https://img.shields.io/badge/IA--Local-Whisper%20%2B%20Mistral-10b2f5?style=flat-square&logo=OpenAI&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Mobile-React%20Native-blue?style=flat-square&logo=react"/>
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=python"/>
-  <img src="https://img.shields.io/badge/UX-Futuristic%20UI%20%2B%20Gamification-facc15?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Voice-Whisper%20ASR%20ready-20c997?style=flat-square"/>
-</p>
+🚀 Funcionalidades
 
----
+🧠 IA Local
 
-## 📚 Índice
+📱 Mobile App (Frontend)
 
-- [📌 Visão Geral](#📌-visão-geral)
-- [🚀 Funcionalidades](#🚀-funcionalidades)
-- [🧠 IA Local](#🧠-ia-local)
-- [📱 Mobile App](#📱-mobile-app)
-- [⚙️ Backend API](#⚙️-backend-api)
-- [🧪 Tecnologias Utilizadas](#🧪-tecnologias-utilizadas)
-- [🗂️ Estrutura de Pastas](#🗂️-estrutura-de-pastas)
-- [🔧 Como Rodar Localmente](#🔧-como-rodar-localmente)
-- [🌐 Roadmap](#🌐-roadmap)
-- [🤝 Contribuição](#🤝-contribuição)
-- [🧩 Licença](#🧩-licença)
+⚙️ Backend API
 
----
+🧪 Tecnologias Utilizadas
 
-## 📌 Visão Geral
+🗂️ Estrutura de Pastas
 
-**Bilingui-AI** é um app educacional de nova geração que permite o **aprendizado de idiomas com feedback instantâneo**, IA embarcada e gamificação. Ideal para quem quer estudar de forma prática, divertida e sem depender da nuvem para tudo.
+🔧 Como Rodar Localmente
 
-🔒 **100% compatível com IA local (offline-ready)**  
-🧠 Corrige sua pronúncia e frases em tempo real  
-🔥 Sistema de XP, progresso e conquistas  
-📚 Geração dinâmica de lições com LLM  
-📊 Histórico, exportação, rankings, e muito mais
+🧭 Roadmap SCRUM
 
----
+🤝 Contribuição
 
-## 🚀 Funcionalidades
+🧩 Licença
 
-| 🔹 Recurso                      | 🧠 Tecnologia          | ✅ Status      |
-|-------------------------------|------------------------|----------------|
-| Gravação de voz               | `react-native-voice`   | ✅ Implementado |
-| Transcrição com Whisper       | `Whisper (local/API)`  | ✅ Integrado    |
-| Correções com LLM             | `Mistral 7B / GPT`      | ✅ Operacional  |
-| Sistema de XP & Níveis        | `Zustand + LocalStorage`| ✅ Integrado    |
-| Lições Dinâmicas              | `LLM + IA adaptativa`  | ✅ Em curso     |
-| Exportar histórico em PDF     | `reportlab (backend)`  | 🔜 Em breve     |
-| Rankings e conquistas         | `Gamification`         | 🔜 Em curso     |
+📌 Visão Geral
+O Bilingui-AI une IA local, UX moderna e aprendizado imersivo de idiomas com:
 
----
+🎤 Correção de fala por áudio (Whisper)
 
-## 🧠 IA Local
+🧠 Chat com IA contextual (Mistral 7B)
 
-| Componente | Modelo | Execução |
-|------------|--------|----------|
-| Transcrição | Whisper (base/tiny) | `local` via `ffmpeg` + `whisper.cpp` ou `OpenAI API` |
-| Correção textual | Mistral-7B (quantizado) | `ollama` local ou backend FastAPI |
-| Lições inteligentes | Prompt engineer + LLM | `FastAPI` |
+📈 Sistema de progresso e XP
 
----
+🏆 Gamificação com ranking e conquistas
 
-## 📱 Mobile App (Expo)
+🗣️ Lição + leitura + fala + perguntas
 
-Frontend desenvolvido em **React Native (Expo Router)** com navegação fluida, suporte a dark mode, tipografia customizada e animações otimizadas.
+💬 Feedback em tempo real com IA embarcada
 
-```bash
+🚀 Funcionalidades
+🔹 Recurso	Tecnologia	Status
+Gravação e transcrição de voz	react-native-voice, Whisper	✅ Pronto
+Correção inteligente de frases	Mistral 7B, prompt NLP	✅ Pronto
+Sistema de lições adaptativas	FastAPI + IA	✅ Em uso
+XP, níveis, medalhas e streaks	Gamificação + Zustand	✅ Em uso
+Radar de estatísticas do usuário	FastAPI + Charts frontend	✅ Ativo
+Chat IA contextual	Mistral via Ollama	✅ Ativo
+PDF de progresso semanal	reportlab (backend)	🔜 Em breve
+Multiplayer via sockets	websockets, socket.io	🔜 Em design
+🧠 IA Local
+🎧 Whisper
+Transcrição offline
+
+Correção de pronúncia e fluência
+
+Feedback fonético e sugestão de repetição
+
+🤖 Mistral 7B
+Correção de frases e respostas livres
+
+Chat com IA por lição/contexto
+
+Avaliação por similaridade semântica (SentenceTransformer)
+
+📱 Mobile App (Frontend)
+Frontend em React Native com Expo Router:
+
+bash
+Copiar
+Editar
 cd frontend
 npm install
 npx expo start
-Componentes reutilizáveis:
-
+Componentes integrados:
 VoiceButton 🎤
 
 XPProgressBar 📈
 
-FeedbackBox ✅
+FeedbackBox
 
-Typography, Container, PrimaryButton
+QuestionScreen.tsx
+
+ProfileScreen com RadarChart
 
 ⚙️ Backend API
-API desenvolvida em FastAPI com rotas assíncronas e microserviços para:
+API em FastAPI, com foco em modularidade, IA, autenticação e gamificação.
 
-/transcribe → Transcreve áudio de fala
-
-/llm → Corrige e explica frases
-
-/lesson → Gera lições adaptativas
-
-/progress/:id → Atualiza progresso do usuário
-
-Inicialização rápida
-bash
-Copiar
-Editar
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn main:app --reload
+Rotas principais
+Endpoint	Método	Descrição
+/auth/login	POST	Login com JWT
+/users/	GET	Dados do perfil
+/lessons/	GET	Lista de lições
+/lesson/question	GET	Pergunta Q&A
+/lesson/answer	POST	Envia resposta do aluno
+/chat/	POST	Chat com IA
+/audio/submit	POST	Envio de áudio para Whisper
+/progress/	GET	Dados do radar e progresso
+/leaderboard/	GET	Ranking global
 🧪 Tecnologias Utilizadas
 Frontend
-React Native 0.76
+React Native 0.76 + Expo
 
-Expo Router 4+
+Expo Router 4.x
 
-Typescript
+Zustand, StyledComponents
 
-Zustand
+react-native-voice, expo-av
 
-react-native-voice / expo-av
-
-StyledComponents ou NativeWind (opcional)
-
-Paper UI, Blur, SafeArea
+Chart.js, Tailwind, NativeWind
 
 Backend
-FastAPI
+FastAPI + Uvicorn
+
+SQLite (ou PostgreSQL)
+
+SQLAlchemy + Alembic
 
 Whisper.cpp / OpenAI Whisper
 
-Mistral 7B com ollama
+Mistral 7B via Ollama
 
-PostgreSQL + ORM
+Sentence Transformers
 
-Celery + Redis (futuro)
-
-DevOps
-Docker / Docker Compose
-
-CI/CD com GitHub Actions (em progresso)
-
-Railway / Render / EC2 (opcional)
+Docker + GitHub Actions (CI/CD)
 
 🗂️ Estrutura de Pastas
 bash
@@ -146,64 +129,63 @@ Copiar
 Editar
 bilingui-AI/
 ├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── screens/
+│   ├── app/                  # Screens, layouts
+│   ├── components/           # Voice, Progress, Charts
 │   ├── assets/images/
-│   ├── service/
-│   └── constants/
+│   └── service/              # API calls, Zustand
 │
 └── backend/
-    ├── api/
-    ├── services/
-    ├── database/
-    ├── models/
-    └── main.py
+    ├── app/
+    │   ├── main.py           # FastAPI entrypoint
+    │   ├── models/           # ORM (User, Progress, etc)
+    │   ├── schemas/          # Pydantic models
+    │   ├── services/         # IA, Whisper, IA Engine
+    │   ├── api/              # Rotas modulares
+    │   └── utils/            # Helpers, JWT, etc.
+    ├── alembic/              # Migrations
+    ├── Dockerfile
+    ├── requirements.txt
+    └── .env
 🔧 Como Rodar Localmente
-Instalar dependências
-
+Frontend
 bash
 Copiar
 Editar
 cd frontend
 npm install
-Executar app mobile
-
-bash
-Copiar
-Editar
 npx expo start
-(Opcional) Rodar backend
-
+Backend
 bash
 Copiar
 Editar
 cd backend
-uvicorn main:app --reload
-🌐 Roadmap
- Gravação e transcrição da fala
-
- Correções com IA
-
- Sistema de XP e níveis
-
- Multiplayer em tempo real com WebSocket
-
- Ranking global com backend Firebase/SQL
-
- Reconhecimento fonético por idioma
-
- Testes automatizados E2E com Detox
-
- Modo criança com avatares e jogos
-
+python -m venv venv
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+🧭 Roadmap SCRUM
+Sprint	Meta
+1️⃣	Auth, User, JWT
+2️⃣	Lições (reading, speaking, question)
+3️⃣	Upload + Transcrição por Whisper
+4️⃣	Chat com IA via Mistral
+5️⃣	Gamificação + Leaderboard
+6️⃣	Estatísticas + RadarChart
+7️⃣	Multiplayer + Feedbacks + Refatorações com Depends
 🤝 Contribuição
-Contribuições são muito bem-vindas!
-Abra uma issue ou envie um PR com melhorias.
+Contribuições são bem-vindas!
 
-Recomendações:
+Fork o projeto
 
-Nomear commits no padrão convencional
+Crie uma branch (git checkout -b feature/nova-feature)
 
-Usar ESLint com npm run lint
+Commit com padrão (git commit -m 'feat: nova feature x')
+
+Push para o branch remoto (git push origin feature/nova-feature)
+
+Abra um PR
+
+🧩 Licença
+Este projeto está sob a licença MIT
+Desenvolvido com 💙 por TechLeadDevelopers
 
