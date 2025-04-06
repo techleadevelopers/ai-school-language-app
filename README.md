@@ -2,7 +2,7 @@
 
 <h1 align="center">🧠 ROAD SCRUM</h1>
 <p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1nMTyIStEGwVRQwFnHclYwRlWflhV-dvf" width="140" />
+  <img src="https://drive.google.com/uc?export=view&id=1nMTyIStEGwVRQwFnHclYwRlWflhV-dvf" width="740" />
 </p>
 
 
