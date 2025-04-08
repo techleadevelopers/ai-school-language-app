@@ -1,5 +1,11 @@
 <h1 align="center">🤖 Bilingui-AI</h1> <p align="center"> <img src="./frontend/assets/images/logo.png" alt="Bilingui-AI Logo" width="160"/> </p> <p align="center"> Plataforma educacional de idiomas com IA local (Whisper + Mistral), gamificação, chat com IA e feedback de fala em tempo real. </p> <p align="center"> <img src="https://img.shields.io/badge/IA--Local-Whisper%20%2B%20Mistral-10b2f5?style=flat-square&logo=OpenAI&logoColor=white"/> <img src="https://img.shields.io/badge/Mobile-React%20Native-blue?style=flat-square&logo=react"/> <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=python"/> <img src="https://img.shields.io/badge/UX-Futuristic%20UI%20%2B%20Gamification-facc15?style=flat-square"/> <img src="https://img.shields.io/badge/Voice-Whisper%20ASR%20ready-20c997?style=flat-square"/> </p>
 
+<h1 align="center">🧠 Desigh UI</h1>
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1XFdYZy-wOy5CQUmHgW8KtsjjPJThGqQ5" width="740" />
+</p>
+
+
 <h1 align="center">🧠 ROAD SCRUM</h1>
 <p align="center">
   <img src="https://drive.google.com/uc?export=view&id=1nMTyIStEGwVRQwFnHclYwRlWflhV-dvf" width="740" />
