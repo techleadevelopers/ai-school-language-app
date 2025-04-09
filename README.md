@@ -79,29 +79,28 @@ Avaliação por similaridade semântica (SentenceTransformer)
 📱 Mobile App (Frontend)
 Frontend em React Native com Expo Router:
 
-bash
-Copiar
-Editar
 cd frontend
 npm install
 npx expo start
+
 Componentes integrados:
 VoiceButton 🎤
-
 XPProgressBar 📈
-
 FeedbackBox
-
 QuestionScreen.tsx
-
 ProfileScreen com RadarChart
+
 
 ⚙️ Backend API
 API em FastAPI, com foco em modularidade, IA, autenticação e gamificação.
 
 Rotas principais
 Endpoint	Método	Descrição
+
+
 /auth/login	POST	Login com JWT
+
+
 /users/	GET	Dados do perfil
 /lessons/	GET	Lista de lições
 /lesson/question	GET	Pergunta Q&A
