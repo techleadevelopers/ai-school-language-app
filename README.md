@@ -11,9 +11,8 @@
   <img src="https://drive.google.com/uc?export=view&id=1nMTyIStEGwVRQwFnHclYwRlWflhV-dvf" width="740" />
 </p>
 
-
-
 📚 Índice
+
 📌 Visão Geral
 
 🚀 Funcionalidades
@@ -26,7 +25,7 @@
 
 🧪 Tecnologias Utilizadas
 
-🗂️ Estrutura de Pastas
+📂 Estrutura de Pastas
 
 🔧 Como Rodar Localmente
 
@@ -34,9 +33,10 @@
 
 🤝 Contribuição
 
-🧩 Licença
+🧉 Licença
 
 📌 Visão Geral
+
 O Bilingui-AI une IA local, UX moderna e aprendizado imersivo de idiomas com:
 
 🎤 Correção de fala por áudio (Whisper)
@@ -47,22 +47,70 @@ O Bilingui-AI une IA local, UX moderna e aprendizado imersivo de idiomas com:
 
 🏆 Gamificação com ranking e conquistas
 
-🗣️ Lição + leitura + fala + perguntas
+🗣️ Licao + leitura + fala + perguntas
 
 💬 Feedback em tempo real com IA embarcada
 
 🚀 Funcionalidades
-🔹 Recurso	Tecnologia	Status
-Gravação e transcrição de voz	react-native-voice, Whisper	✅ Pronto
-Correção inteligente de frases	Mistral 7B, prompt NLP	✅ Pronto
-Sistema de lições adaptativas	FastAPI + IA	✅ Em uso
-XP, níveis, medalhas e streaks	Gamificação + Zustand	✅ Em uso
-Radar de estatísticas do usuário	FastAPI + Charts frontend	✅ Ativo
-Chat IA contextual	Mistral via Ollama	✅ Ativo
-PDF de progresso semanal	reportlab (backend)	🔜 Em breve
-Multiplayer via sockets	websockets, socket.io	🔜 Em design
+
+Recurso
+
+Tecnologia
+
+Status
+
+Gravação e transcrição de voz
+
+react-native-voice, Whisper
+
+✅ Pronto
+
+Correção inteligente de frases
+
+Mistral 7B, prompt NLP
+
+✅ Pronto
+
+Sistema de lições adaptativas
+
+FastAPI + IA
+
+✅ Em uso
+
+XP, níveis, medalhas e streaks
+
+Gamificação + Zustand
+
+✅ Em uso
+
+Radar de estatísticas do usuário
+
+FastAPI + Charts frontend
+
+✅ Ativo
+
+Chat IA contextual
+
+Mistral via Ollama
+
+✅ Ativo
+
+PDF de progresso semanal
+
+reportlab (backend)
+
+🔜 Em breve
+
+Multiplayer via sockets
+
+websockets, socket.io
+
+🔜 Em design
+
 🧠 IA Local
+
 🎧 Whisper
+
 Transcrição offline
 
 Correção de pronúncia e fluência
@@ -70,6 +118,7 @@ Correção de pronúncia e fluência
 Feedback fonético e sugestão de repetição
 
 🤖 Mistral 7B
+
 Correção de frases e respostas livres
 
 Chat com IA por lição/contexto
@@ -77,6 +126,7 @@ Chat com IA por lição/contexto
 Avaliação por similaridade semântica (SentenceTransformer)
 
 📱 Mobile App (Frontend)
+
 Frontend em React Native com Expo Router:
 
 cd frontend
@@ -84,33 +134,37 @@ npm install
 npx expo start
 
 Componentes integrados:
+
 VoiceButton 🎤
+
 XPProgressBar 📈
+
 FeedbackBox
+
 QuestionScreen.tsx
+
 ProfileScreen com RadarChart
 
-
 ⚙️ Backend API
+
 API em FastAPI, com foco em modularidade, IA, autenticação e gamificação.
 
-Rotas principais
-Endpoint	Método	Descrição
+Rotas principais:
 
+/auth/login         POST   → Login com JWT
+/users/             GET    → Dados do perfil
+/lessons/           GET    → Lista de lições
+/lesson/question    GET    → Pergunta Q&A
+/lesson/answer      POST   → Envia resposta do aluno
+/chat/              POST   → Chat com IA
+/audio/submit       POST   → Envio de áudio para Whisper
+/progress/          GET    → Dados do radar e progresso
+/leaderboard/       GET    → Ranking global
 
-/auth/login	POST	Login com JWT
-
-
-/users/	GET	Dados do perfil
-/lessons/	GET	Lista de lições
-/lesson/question	GET	Pergunta Q&A
-/lesson/answer	POST	Envia resposta do aluno
-/chat/	POST	Chat com IA
-/audio/submit	POST	Envio de áudio para Whisper
-/progress/	GET	Dados do radar e progresso
-/leaderboard/	GET	Ranking global
 🧪 Tecnologias Utilizadas
+
 Frontend
+
 React Native 0.76 + Expo
 
 Expo Router 4.x
@@ -122,6 +176,7 @@ react-native-voice, expo-av
 Chart.js, Tailwind, NativeWind
 
 Backend
+
 FastAPI + Uvicorn
 
 SQLite (ou PostgreSQL)
@@ -134,12 +189,12 @@ Mistral 7B via Ollama
 
 Sentence Transformers
 
+DevOps
+
 Docker + GitHub Actions (CI/CD)
 
-🗂️ Estrutura de Pastas
-bash
-Copiar
-Editar
+📂 Estrutura de Pastas
+
 bilingui-AI/
 ├── frontend/
 │   ├── app/                  # Screens, layouts
@@ -159,46 +214,72 @@ bilingui-AI/
     ├── Dockerfile
     ├── requirements.txt
     └── .env
+
 🔧 Como Rodar Localmente
+
 Frontend
-bash
-Copiar
-Editar
+
 cd frontend
 npm install
 npx expo start
+
 Backend
-bash
-Copiar
-Editar
+
 cd backend
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+
 🧭 Roadmap SCRUM
-Sprint	Meta
-1️⃣	Auth, User, JWT
-2️⃣	Lições (reading, speaking, question)
-3️⃣	Upload + Transcrição por Whisper
-4️⃣	Chat com IA via Mistral
-5️⃣	Gamificação + Leaderboard
-6️⃣	Estatísticas + RadarChart
-7️⃣	Multiplayer + Feedbacks + Refatorações com Depends
+
+Sprint
+
+Meta
+
+1️⃣
+
+Auth, User, JWT
+
+2️⃣
+
+Lições (reading, speaking, question)
+
+3️⃣
+
+Upload + Transcrição por Whisper
+
+4️⃣
+
+Chat com IA via Mistral
+
+5️⃣
+
+Gamificação + Leaderboard
+
+6️⃣
+
+Estatísticas + RadarChart
+
+7️⃣
+
+Multiplayer + Feedbacks + Refatorações
+
 🤝 Contribuição
+
 Contribuições são bem-vindas!
 
-Fork o projeto
+# Fork o projeto
+git checkout -b feature/nova-feature
 
-Crie uma branch (git checkout -b feature/nova-feature)
+# Commit com padrão
+git commit -m "feat: nova feature x"
 
-Commit com padrão (git commit -m 'feat: nova feature x')
+# Push para o branch remoto
+git push origin feature/nova-feature
 
-Push para o branch remoto (git push origin feature/nova-feature)
+# Abra um PR
 
-Abra um PR
+🧉 Licença
 
-🧩 Licença
-Este projeto está sob a licença MIT
-Desenvolvido com 💙 por TechLeadDevelopers
-
+Este projeto está sob a licença MIT — Desenvolvido com 💙 por TechLeadDevelopers
