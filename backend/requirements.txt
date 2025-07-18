@@ -1,3 +1,4 @@
+
 # Core FastAPI stack
 fastapi
 uvicorn[standard]
@@ -15,24 +16,55 @@ databases
 passlib[bcrypt]
 python-jose[cryptography]
 
-# Audio processing (para Whisper)
-whisper
+# AI e Machine Learning - Produção
+openai-whisper
+torch
+transformers
+sentence-transformers
+spacy
+librosa
+soundfile
+scipy
+numpy
+pandas
+scikit-learn
+
+# Processamento de áudio
 ffmpeg-python
+PyDub
+speech_recognition
+
+# Análise de texto
+textstat
+textblob
+nltk
 
 # IA e requisições externas
 openai
 httpx
+requests
 
 # Background tasks e utilitários
 aiofiles
 email-validator
 python-slugify
+asyncio
+
+# Análise de dados
+matplotlib
+seaborn
+plotly
 
 # Dev tools
 ipython
 pytest
 pytest-asyncio
+jupyter
 
 # Para SQLite local
 aiosqlite
 asyncpg
+
+# Logging e monitoramento
+structlog
+prometheus-client
